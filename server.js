@@ -8,6 +8,7 @@
 var fs = require('fs');
 var express = require('express');
 var app = express();
+var time = require("./time");
 
 if (!process.env.DISABLE_XORIGIN) {
   app.use(function(req, res, next) {
@@ -57,6 +58,6 @@ app.listen(process.env.PORT, function () {
   console.log('Node.js listening at port ' + process.env.PORT);
 });
 
-app.get('/time', function(req, res){
-  
+app.get('/:time', function(req, res){
+  console.log(req);
 });
