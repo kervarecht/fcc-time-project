@@ -57,6 +57,6 @@ app.listen(process.env.PORT, function () {
   console.log('Node.js listening at port ' + process.env.PORT);
 });
 
-app.get('/', function(req, res){
-  console.log("receiving your message!");
+app.get('/time', function(req, res){
+  
 });
