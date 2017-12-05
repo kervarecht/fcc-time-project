@@ -40,6 +40,11 @@ app.route('/')
       console.log("It's the routing one.")
     })
 
+app.route("/time")
+  .get(function(req, res){
+    console.log(req);
+});
+
 // Respond not found to all the wrong routes
 app.use(function(req, res, next){
   res.status(404);
