@@ -42,8 +42,8 @@ app.route('/')
 
 app.route("/time")
   .get(function(req, res){
-  var rawTime = req.query.data;
-  
+  var rawTime = moment(req.query.data);
+  console.log(rawTime.format("MMMM Do YYYY"));
   
 });
 
