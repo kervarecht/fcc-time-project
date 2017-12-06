@@ -42,7 +42,9 @@ app.route('/')
 
 app.route("/time")
   .get(function(req, res){
-  res.send(req.query);
+ 
+  res.send(JSOreq.params);
+  
 });
 
 // Respond not found to all the wrong routes
