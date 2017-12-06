@@ -8,7 +8,7 @@
 var fs = require('fs');
 var express = require('express');
 var app = express();
-var time = require("./time")
+var moment = require('moment');
 
 if (!process.env.DISABLE_XORIGIN) {
   app.use(function(req, res, next) {
@@ -42,7 +42,7 @@ app.route('/')
 
 app.route("/time")
   .get(function(req, res){
-  var time = req.query.data;
+  var rawTime = req.query.data;
   
   
 });
