@@ -40,11 +40,10 @@ app.route('/')
       console.log("It's the routing one.")
     })
 
-app.route("/time")
+app.get("/:time")
   .get(function(req, res){
  
-  res.send(JSOreq.params);
-  
+  res.send(JSON.stringify(req.query));
 });
 
 // Respond not found to all the wrong routes
