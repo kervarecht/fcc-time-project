@@ -37,13 +37,14 @@ app.route('/_api/package.json')
 app.route('/')
     .get(function(req, res) {
 		  res.sendFile(process.cwd() + '/views/index.html');
-      console.log("It's the routing one.")
+      
     })
 
-app.get("/:time")
+app.route("/time")
   .get(function(req, res){
- 
-  res.send(JSON.stringify(req.query));
+  var time = req.query.data;
+  
+  
 });
 
 // Respond not found to all the wrong routes
@@ -62,6 +63,6 @@ app.use(function(err, req, res, next) {
 })
 
 app.listen(process.env.PORT, function () {
-  console.log('Node.js listening at port ' + process.env.PORT);
+  // console.log('Node.js listening at port ' + process.env.PORT);
 });
 
