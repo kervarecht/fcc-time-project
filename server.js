@@ -43,9 +43,7 @@ app.route('/')
 app.route("/time")
   .get(function(req, res){
   var rawTime = moment(req.query.data);
-  console.log(rawTime.format("MMMM Do YYYY"));
-  
-});
+  });
 
 // Respond not found to all the wrong routes
 app.use(function(req, res, next){
