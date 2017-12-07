@@ -6,7 +6,7 @@ $(document).ready(function(){
         data: time
       },
       function(data){
-        console.log("Response: " + data);
+        $("#answer").html(data);
       });
 
     });

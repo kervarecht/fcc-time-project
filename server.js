@@ -8,7 +8,7 @@
 var fs = require('fs');
 var express = require('express');
 var app = express();
-var moment = require('moment');
+var time = require('./time');
 
 if (!process.env.DISABLE_XORIGIN) {
   app.use(function(req, res, next) {
@@ -42,7 +42,7 @@ app.route('/')
 
 app.route("/time")
   .get(function(req, res){
-  
+    res.send(JSON.stringify(time.time(req.query.data)));
   });
 
 // Respond not found to all the wrong routes
