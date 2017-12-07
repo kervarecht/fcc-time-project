@@ -42,14 +42,7 @@ app.route('/')
 
 app.route("/time")
   .get(function(req, res){
-  var unixTime = moment(req.query.data).unix();
-  var naturalTime = moment(req.query.data).format();
   
-  var response = {
-    "unix": unixTime,
-    "natural": naturalTime
-  }
-  console.log(response);
   });
 
 // Respond not found to all the wrong routes
